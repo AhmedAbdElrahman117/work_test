@@ -42,9 +42,7 @@ class HistoryCard extends StatelessWidget {
     return Container(
       width: 56,
       height: 56,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-      ),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(12),
         child: AppSvg(assetName: history.imageUrl, fit: BoxFit.cover),
@@ -58,25 +56,16 @@ class HistoryCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            history.restaurantName,
-            style: AppText().subtitle(context),
-          ),
+          Text(history.restaurantName, style: AppText().subtitle(context)),
           const SizedBox(height: 4),
           Text(
             history.date,
-            style: AppText().caption(
-              context,
-              weight: FontWeight.w400,
-            ),
+            style: AppText().caption(context, weight: FontWeight.w400),
           ),
           const SizedBox(height: 8),
           RichText(
             text: TextSpan(
-              style: AppText().caption(
-                context,
-                weight: FontWeight.w500,
-              ),
+              style: AppText().caption(context, weight: FontWeight.w500),
               children: [
                 TextSpan(
                   text: '${history.cost} \u2022 ',
@@ -108,10 +97,7 @@ class HistoryCard extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 12,
-            vertical: 6,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
           decoration: BoxDecoration(
             color: AppColors.gold,
             borderRadius: BorderRadius.circular(12),
